@@ -93,7 +93,7 @@ class RepositoryDetails extends Component {
                 <label style={{ margin: '5px', fontSize: '20' }}><Icon name='fork' />{this.state.forks_count} Fork(s) </label>
                 <label style={{ margin: '5px', fontSize: '20' }}><Icon name='warning circle' /> {this.state.open_issues} Open Issue(s)</label>
                 <label style={{ margin: '5px', fontSize: '20' }}><Icon name='star' /> {this.state.stargazers_count} Star(s) </label>
-                <label style={{ margin: '5px', fontSize: '20' }}> Total Sommit(s) : {this.state.commit}</label>
+                <label style={{ margin: '5px', fontSize: '20' }}> Total Commit(s) : {this.state.commit}</label>
               </div>
                 </Card.Content>
 
