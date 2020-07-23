@@ -2,7 +2,7 @@ export const gitHubService = {
     getAllUserService,
     getAllRepositoriesService,
     getRepositoryDetails,
-    getSHAService
+    getStatsService
 };
 
 function getAllUserService(search) { 
@@ -34,7 +34,7 @@ function getAllRepositoriesService(url){
     })
 }
 
-function getSHAService(login, name){
+function getStatsService(login, name){
     return fetch('https://api.github.com/repos/'+login+'/'+name+'/stats/contributors').then(
         res =>res.json()).then((responseJson) =>{
         return responseJson;

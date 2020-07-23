@@ -39,7 +39,7 @@ class RepositoryDetails extends Component {
 
   getCommits(login, name){
     this.setState({loader : true})
-    gitHubService.getSHAService(login, name).then((response) =>{
+    gitHubService.getStatsService(login, name).then((response) =>{
       this.setState({loader : false})
       let total = 0;
       response.map((element) =>{
