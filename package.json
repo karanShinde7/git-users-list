@@ -1,7 +1,7 @@
 {
   "name": "coditation-assignment",
   "version": "0.1.0",
-  "homepage": "https://objective-allen-3ddedf.netlify.app/",
+  "homepage": "https://git-user-list.netlify.app",
   "private": true,
   "engines": {
     "node": "12.18.2",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
