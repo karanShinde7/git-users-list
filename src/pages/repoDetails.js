@@ -55,7 +55,7 @@ class RepositoryDetails extends Component {
     return (
       <div>
         <div className="header-class">
-          <h3 className="text-color">Github</h3>
+          <h3 className="text-color">Github Search</h3>
         </div>
         {this.state.loader 
         ?
