@@ -1,0 +1,96 @@
+body {
+  background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #9ca6a7 74%);
+    font-family: 'Playfair Display', serif;
+}
+body,html {
+  min-height: 100% !important;
+  height: auto !important;
+}
+
+.header-class{
+  padding: 20px;
+  height: 60px;
+  width: 100%;
+  background-color:#01101F !important;
+  top : 0;
+}
+
+.text-color {
+  color : #ffffff
+}
+
+.input-form{
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+/* .ui.input{
+  width : 300px !important;
+} */
+.user-card{
+  display: flex;
+  flex-direction: column;
+  border-radius: 100;
+}
+
+.repo-card{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-radius: 100;
+}
+
+.card{
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.card-item{
+  background-color: #c4c4c4 !important;
+}
+
+.repo-card-details{
+  width : 80% !important;
+}
+
+.image-view{
+  height: 50px;
+  width: 50px;
+}
+
+.container-view{
+  min-height: 500px;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: 10s
+}
+
+/* width 30% coz we want to show 3 box in one row for browser*/
+.card-view{
+  width: 30%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.model-header{
+  margin: auto;
+  justify-content: space-between;
+}
+
+/* Tablet view */
+@media(max-width : 768px){
+ .card-view{
+     width: 45%;
+ }
+}
+
+/* Mobile View */
+
+@media(max-width : 450px){
+  .card-view{
+      width: 90%
+  }
+}
