@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Form, Card, Icon, Image, Modal, Dimmer, Loader } from 'semantic-ui-react'
 import '../App.css';
 import { gitHubService } from '../services/service';
-import DetailComponent from '../compoent/detailComponent'
+import DetailComponent from '../compoent/detailComponent';
+import HeaderComponent from '../compoent/headerComponent';
 import PropTypes from "prop-types";
 
 class Home extends Component {
@@ -129,9 +130,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="header-class">
-          <h3 className="text-color">Github Search</h3>
-        </div>
+        <HeaderComponent header = 'Github Search'/>
         <div className='input-form'>
           <Form onSubmit={this.handleSubmit}>
             <h3 className="text-color">Enter User Name</h3>

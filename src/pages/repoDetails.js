@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {  Card, Dimmer, Loader,Icon } from 'semantic-ui-react'
 import '../App.css';
 import { gitHubService } from '../services/service';
+import HeaderComponent from '../compoent/headerComponent';
 
 class RepositoryDetails extends Component {
 
@@ -17,6 +18,13 @@ class RepositoryDetails extends Component {
   componentDidMount() {
    this.getRepositoryDetails(this.props.match.params.login,this.props.match.params.name);
    this.getCommits(this.props.match.params.login,this.props.match.params.name);
+  }
+
+  componentWillUnmount(){
+    this.setState({
+      repositoryData : '',
+      commit : 0
+    })
   }
 
   getRepositoryDetails(login, name){
@@ -54,9 +62,7 @@ class RepositoryDetails extends Component {
   render() {
     return (
       <div>
-        <div className="header-class">
-          <h3 className="text-color">Github Search</h3>
-        </div>
+        <HeaderComponent header = 'Repository details'/>
         {this.state.loader 
         ?
             <Dimmer active>
