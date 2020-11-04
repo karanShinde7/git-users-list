@@ -3,7 +3,6 @@ import { Card, Icon } from 'semantic-ui-react'
 
 const DetailComponent = (props) => {
   return (
-    <>
     <Card>
     <Card.Content>
       <Card.Header>{props.repo.name}</Card.Header>
@@ -17,7 +16,6 @@ const DetailComponent = (props) => {
       <Icon name='fork' /> <label>{props.repo.forks_count} Repositories</label> <br />
     </Card.Content>
   </Card>
-    </>
   );
 }
 

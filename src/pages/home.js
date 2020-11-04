@@ -38,9 +38,6 @@ class Home extends Component {
     this.handleClose = this.handleClose.bind(this)
   }
 
-  componentDidMount() {
-  }
-
   handleChange(event) {
     this.setState({ searchKey: event.target.value, validation: "" })
   }
@@ -93,22 +90,6 @@ class Home extends Component {
 
   getRepositoryDetails(login, name) {
     this.props.history.push('/repository/'+login+'/'+name) 
-    // If we want to move next page
-    // this.setState({ loader: true })
-    // gitHubService.getRepositoryDetails(login, name).then((repo) => {
-    //   this.setState({ loader: false })
-    //   this.setState({
-    //     repositoryData: repo,
-    //     repoName: repo.name,
-    //     repoDescription: repo.description,
-    //     forks_count: repo.forks_count,
-    //     open_issues: repo.open_issues,
-    //     stargazers_count: repo.stargazers_count
-    //   })
-    // }).catch((error) => {
-    //   this.setState({ loader: false })
-    // })
-    // this.getCommits(login, name)
   }
 
   getCommits(login, name) {
@@ -152,8 +133,7 @@ class Home extends Component {
             <Loader>Loading</Loader>
           </Dimmer>
           : <>
-            <div className='user-card'>
-              <div className="card">
+            <div className='user-card card'>
                 {!this.state.name
                   ? <h4 style={{ color: 'red' }}>{this.state.validation}</h4>
                   :
@@ -177,14 +157,11 @@ class Home extends Component {
                   </Card>
                   </>
                 }
-              </div>
             </div>
-            <div className='user-card'>
-              <div className="card">
+            <div className='user-card card'>
               {this.state.repositories.length > 0 && 
                 <h2 className="text-color">{this.state.name}'s Repositories ({this.state.repoCount})</h2>
               }
-              </div>
               </div>
             <div className="container-view">
               {this.state.repositories.length > 0
@@ -212,12 +189,10 @@ class Home extends Component {
             <Modal.Description>
               <h5>{this.state.repoDescription} </h5>
               <h4>Owner Name: {this.state.name} </h4>
-              <div>
                 <label style={{ margin: '5px', fontSize: '20' }}><Icon name='fork' />{this.state.forks_count} Fork(s) </label>
                 <label style={{ margin: '5px', fontSize: '20' }}><Icon name='warning circle' /> {this.state.open_issues} Open Issue(s)</label>
                 <label style={{ margin: '5px', fontSize: '20' }}><Icon name='star' /> {this.state.stargazers_count} Star(s) </label>
                 <label style={{ margin: '5px', fontSize: '20' }}> Total Sommit(s) : {this.state.commit}</label>
-              </div>
             </Modal.Description>
           </Modal.Content>
         </Modal>
